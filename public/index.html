@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mural Urutaí · notícias do IF Goiano</title>
+  <meta name="theme-color" content="#025c75">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/styleHome.css">
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="bar">
+        <span class="live" id="live" data-s="loading" role="status"><span class="dot"></span><span
+            id="liveTxt">Conectando…</span></span>
+        <button class="refresh" id="refresh">Verificar agora</button>
+      </div>
+      <h1>Mural Urutaí</h1>
+      <p class="sub">Notícias do IF Goiano – Campus Urutaí, com bolsas, auxílios, vales, processos seletivos e eventos
+        em destaque.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="tabs" id="tabs"></div>
+    <div class="topics" id="topics" role="group" aria-label="Filtrar por assunto"></div>
+    <div class="tools"><input id="q" type="search" placeholder="Buscar nas notícias" aria-label="Buscar nas notícias">
+    </div>
+    <p class="legend">
+      <span><i style="border-color:var(--open);background:var(--open-bg)"></i>Inscrição aberta</span>
+      <span><i style="border-color:var(--closed);background:var(--closed-bg)"></i>Prazo encerrado</span>
+      <span><i style="border:2px dashed var(--unknown);background:var(--unknown-bg)"></i>Prazo não identificado</span>
+      <span><i style="border-color:var(--line);background:var(--paper)"></i>Resultado / comunicado</span>
+      <span>★ Destaque</span>
+    </p>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <p class="archive" id="archive"></p>
+  </main>
+  <footer>Dados lidos de <a href="https://ifgoiano.edu.br/home/index.php/ultimas-noticias-urutai.html" target="_blank"
+      rel="noopener">ifgoiano.edu.br</a>. Os prazos são extraídos automaticamente do texto de cada notícia; confira
+    sempre o edital.</footer>
+  <div id="toast" role="status"></div>
+
+  <script src="javascript/scriptHome.js"></script>
+</body>
+
+</html>

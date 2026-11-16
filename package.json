@@ -1,0 +1,8 @@
+{
+  "name": "mural-urutai",
+  "version": "1.0.0",
+  "description": "Monitor em tempo real das notícias do IF Goiano - Campus Urutaí",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test-parser.js" },
+  "engines": { "node": ">=18" }
+}
