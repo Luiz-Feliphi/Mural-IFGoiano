@@ -1,0 +1,22 @@
+# Nome do workflow que aparecerá na aba "Actions" do GitHub
+name: Docker Build Image CI
+
+# Define quando o pipeline será executado
+on:
+  pull_request:
+    branches: [ "main" ] # Roda apenas em PRs direcionados para a branch main
+
+jobs:
+  build:
+    # Sistema operacional da máquina virtual onde o pipeline vai rodar
+    runs-on: ubuntu-latest
+
+    steps:
+    # Passo 1: Baixa os arquivos do repositório para a máquina virtual
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    # Passo 2: Constrói a imagem Docker usando o Dockerfile da raiz
+    # A tag usa o timestamp atual para evitar conflitos de nome
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag mural-ifgoiano:$(date +%s)
