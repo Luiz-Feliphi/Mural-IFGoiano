@@ -27,7 +27,7 @@
 name: Build and deploy a container to an Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: mural-ifgoiano  # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: muralifgoiano  # set this to the name of your Azure Web App
 
 on:
   pull_request:
@@ -36,6 +36,7 @@ on:
 
 permissions:
   contents: read
+  packages: write
 
 jobs:
   build:
